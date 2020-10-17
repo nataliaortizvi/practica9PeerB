@@ -82,6 +82,12 @@ public class Main extends PApplet implements OnMessageListener{
 			}
 		}
 		
+
+		fill(355,0,0);
+		text("x:"+mouseX+"y:"+mouseY, mouseX, mouseY);
+	
+		
+		
 	}
 	
 	public void recibiendo(String msg) {
@@ -95,7 +101,32 @@ public class Main extends PApplet implements OnMessageListener{
 	}
 	
 	public void mousePressed() {
-		udp.sendMessage("hola desde peer A");
+		if(mouseX > 50 && mouseX < 220 && mouseY > 17 && mouseY < 150) {
+			if(comi.getType().equalsIgnoreCase("sandia")) {
+				udp.sendMessage("Pedido de jugo de sandia listo");
+			}
+			if(comi.getType().equalsIgnoreCase("perro")) {
+				udp.sendMessage("Pedido de perro caliente listo");
+			}
+			if(comi.getType().equalsIgnoreCase("papas")) {
+				udp.sendMessage("Pedido de papas listo");
+			}
+			if(comi.getType().equalsIgnoreCase("qbano")) {
+				udp.sendMessage("Pedido de cubanolisto");
+			}
+			
+		}
+		if(mouseX > 50 && mouseX < 220 && mouseY > 17 && mouseY < 150) {
+			udp.sendMessage("Pedido listo");
+		}
+		if(mouseX > 50 && mouseX < 220 && mouseY > 17 && mouseY < 150) {
+			udp.sendMessage("Pedido listo");
+		}
+		if(mouseX > 50 && mouseX < 220 && mouseY > 17 && mouseY < 150) {
+			udp.sendMessage("Pedido listo");
+		}
+		
+		
 	
 	
 		
