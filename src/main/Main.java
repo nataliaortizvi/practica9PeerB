@@ -59,9 +59,6 @@ public class Main extends PApplet implements OnMessageListener{
 	public void draw() {
 		background(135,173,294);
 		
-		fill(105,40,20);
-		textSize(12);
-		text("Haga click sobre la imagen del pedido para informale al cliente que ya está listo" ,15,685);
 		
 		for(int i=0; i<food.size(); i++) {
 			comi = food.get(i);
@@ -100,36 +97,6 @@ public class Main extends PApplet implements OnMessageListener{
 		
 	}
 	
-	public void mousePressed() {
-		if(mouseX > 50 && mouseX < 220 && mouseY > 17 && mouseY < 150) {
-			if(comi.getType().equalsIgnoreCase("sandia")) {
-				udp.sendMessage("Pedido de jugo de sandia listo");
-			}
-			if(comi.getType().equalsIgnoreCase("perro")) {
-				udp.sendMessage("Pedido de perro caliente listo");
-			}
-			if(comi.getType().equalsIgnoreCase("papas")) {
-				udp.sendMessage("Pedido de papas listo");
-			}
-			if(comi.getType().equalsIgnoreCase("qbano")) {
-				udp.sendMessage("Pedido de cubanolisto");
-			}
-			
-		}
-		if(mouseX > 50 && mouseX < 220 && mouseY > 17 && mouseY < 150) {
-			udp.sendMessage("Pedido listo");
-		}
-		if(mouseX > 50 && mouseX < 220 && mouseY > 17 && mouseY < 150) {
-			udp.sendMessage("Pedido listo");
-		}
-		if(mouseX > 50 && mouseX < 220 && mouseY > 17 && mouseY < 150) {
-			udp.sendMessage("Pedido listo");
-		}
-		
-		
 	
-	
-		
-	}
 
 }
