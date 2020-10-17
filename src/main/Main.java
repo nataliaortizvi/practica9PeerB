@@ -27,7 +27,7 @@ public class Main extends PApplet implements OnMessageListener{
 	}
 	
 	public void settings() {
-		size(400,600);
+		size(500,700);
 	}
 	
 	public void setup() {
@@ -59,10 +59,14 @@ public class Main extends PApplet implements OnMessageListener{
 	public void draw() {
 		background(135,173,294);
 		
+		fill(105,40,20);
+		textSize(12);
+		text("Haga click sobre la imagen del pedido para informale al cliente que ya está listo" ,15,685);
+		
 		for(int i=0; i<food.size(); i++) {
 			comi = food.get(i);
 			fill(0);
-			text("Pedido "+comi.getNum()+"\n"+comi.getFecha(), comi.getX(), comi.getY());
+			text("Pedido "+comi.getNum()+"\n"+ "Hora: "+ comi.getFecha(), comi.getX(), comi.getY());
 			
 			if(comi.getType().equalsIgnoreCase("sandia")) {
 				image(jugo, comi.getX()-190, comi.getY()-50,100,140);
